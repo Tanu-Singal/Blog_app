@@ -1,0 +1,322 @@
+/*.card .button{
+    background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(244, 45, 122, 0.71) 0%,
+        rgb(247, 127, 203) 100%
+      );
+      color: black;
+      border: 3px solid  rgba(231, 6, 92, 0.71);
+}
+.card{
+    background-color: black;
+    border: 1px solid  rgba(231, 6, 92, 0.71);
+    height: 500px;
+    width: 350px;
+    margin-top: 20px;
+}
+.card:hover{
+    box-shadow: 0px 4px 15px rgba(225, 26, 221, 0.5);
+}
+.card p{
+    color: white;
+}
+.card h5{
+    color: white;
+}
+.card .category{
+  color: rgba(231, 6, 92, 0.71);
+}
+.card .card-img-top{
+    width: 350px;
+    height: 200px;
+}*/
+.card {
+    
+    border: 1px solid rgba(231, 6, 92, 0.71);
+   height: 500px;
+   max-height: 500px;
+    width: 100%;
+    max-width: 350px;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.card:hover {
+    box-shadow: 0px 4px 15px rgba(225, 26, 221, 0.5);
+}
+.card .button{
+    background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(244, 45, 122, 0.71) 0%,
+        rgb(247, 127, 203) 100%
+      );
+      color: black;
+     
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      
+}
+.card .button:hover{
+   transition: 0.2 ease;
+}
+.card p,
+.card h5 {
+    color: white;
+}
+.card-body{
+    flex: 1; /* Allows it to expand */
+    display: flex;
+    flex-direction: column;
+   
+    min-height: 220px; /* Adjust this as needed */
+    max-height: auto; /* Allows it to expand if needed */
+    padding: 15px;
+   
+}
+
+.card .card-img-top {
+   width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Responsive Blog Cards */
+@media (max-width: 1024px) {
+    .card {
+        max-width: 300px;
+        height: 480px;
+    }
+    .card{
+        margin: 4px auto;
+      }
+}
+@media (max-width: 883px) {
+    .card-title{
+        font-size: 18px;
+    }
+    .card-text{
+        font-size: 15px;
+    }
+}
+@media (max-width: 782px) {
+    .card-title{
+        font-size: 17px;
+    }
+    .card-text{
+        font-size: 14px;
+    }
+}
+@media (max-width: 768px) {
+    .card {
+        max-width: 280px;
+        height: 440px;
+    }
+    .card .card-img-top {
+       
+        height: 150px;
+    }
+    .card{
+        margin: 4px auto;
+      }
+}
+@media (max-width: 740px) {
+    .card .button{
+        padding: 7px 5px;
+     }
+     .card{
+        margin: 4px auto;
+      }
+}
+@media (max-width: 716px) {
+    .card-title{
+        font-size: 16px;
+    }
+    .card-text{
+        font-size: 13px;
+    }
+}
+@media (max-width: 708px) {
+    .card {
+        max-width: 280px;
+        height: 420px;
+    }
+    .card .card-img-top {
+       
+         height: 150px;
+     }
+     .card .button{
+        padding: 7px 5px;
+     }
+     .card{
+        margin: 4px auto;
+      }
+}
+
+@media (max-width: 696px) {
+    .card {
+        max-width: 270px;
+        height: 400px;
+        gap: 3px;
+    }
+    .card .card-img-top {
+       
+         height: 140px;
+     }
+     .card .button{
+        padding: 7px 2px;
+     }
+     .card{
+        margin: 5px auto;
+      }
+      .card-title{
+        font-size: 15px;
+    }
+    .card-text{
+        font-size: 12px;
+    }
+}
+@media (max-width: 674px) {
+    .card {
+        max-width: 280px;
+        height: 400px;
+   
+    }
+    .card .card-img-top {
+       
+         height: 140px;
+     }
+     .card .button{
+        padding: 7px 2px;
+     }
+     .card{
+        margin: 5px auto;
+      }
+}
+@media (max-width: 659px) {
+   
+     .card .button{
+        padding: 5px 1px;
+     }
+     .card{
+        margin: 5px auto;
+      }
+      .card-title{
+        font-size: 12px;
+    }
+    .card-text{
+        font-size: 12px;
+    }
+}
+@media (max-width: 654px) {
+   
+     .card-title{
+       font-size: 10px;
+   }
+   .card-text{
+       font-size: 11px !important;
+   }
+}
+@media (max-width: 650px) {
+   
+    .card .button{
+        padding: 7px 5px;
+    }
+    .card-text{
+        font-size: 15px;
+    }
+    .card{
+        margin: 5px auto;
+      }
+
+}
+@media (max-width: 641px) {
+   
+    .card .button{
+        padding: 4px 2px;
+    }
+    .card-text{
+        font-size: 15px;
+    }
+    .card{
+        margin: 3px auto;
+      }
+}
+@media (max-width: 620px) {
+   
+    .card-title{
+      font-size: 16px;
+  }
+  .card-text{
+      font-size: 15px !important;
+  }
+}
+@media (max-width: 527px) {
+   
+    .card-title{
+      font-size: 15px;
+  }
+  .card-text{
+      font-size: 13px !important;
+  }
+}
+@media (max-width: 480px) {
+    .card {
+        max-width: 100%;
+        padding: 10px;
+
+    }
+    .card .button{
+        padding: 8px 6px;
+      
+  }
+  .card{
+    margin: 5px auto;
+  }
+}
+@media (max-width: 460px) {
+   
+    .card-title{
+      font-size: 14px;
+  }
+  .card-text{
+      font-size: 12px !important;
+  }
+}
+@media (max-width: 430px) {
+   
+    .card-title{
+      font-size: 18px;
+  }
+  .card-text{
+      font-size: 17px !important;
+  }
+}
+@media (max-width: 380px) {
+    .card .button{
+          padding: 8px 6px;
+        
+    }
+    .card{
+        margin: 6px auto;
+    }
+    .bl-item{
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media (max-width: 349px) {
+   
+    .card-title{
+      font-size: 17px;
+  }
+  .card-text{
+      font-size: 16px !important;
+  }
+}

@@ -1,0 +1,200 @@
+/*.li_group{
+    background:rgb(250, 49, 156);
+    padding-Left:6px;
+    padding-Right:6px;
+  
+}
+ul li{
+    cursor: pointer;
+}*/
+/*.item-menu-bar{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+     gap: 30px;
+     margin-top: 80px;
+      width: fit-content;
+      margin: 0 auto ;
+      max-width:1100px;
+       padding: 0 20px;
+}
+.li_group {
+    background: rgb(250, 49, 156);
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 5px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    color: white;
+    list-style: none;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+ul li {
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+
+@media (max-width: 1024px) {
+    .item-menu-bar {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    ul {
+        gap: 15px;
+    }
+    ul li {
+        font-size: 14px;
+    }
+}
+@media (max-width: 690px) {
+    .item-menu-bar {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 20px;
+    }
+  
+}
+@media (max-width: 768px) {
+    .item-menu-bar {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    ul li {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .item-menu-bar {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    ul li {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}*/
+/* General Styles */
+html,body{
+    overflow-y: scroll;
+  }
+.item-menu-bar {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin-top: 80px;
+    width: fit-content;
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 0 20px;
+}
+
+.li_group {
+    background: rgb(250, 49, 156);
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 5px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+   
+    list-style: none;
+    gap: 22px;
+    flex-wrap: wrap; /* Allows the menu items to wrap in small screens */
+}
+
+ul li {
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+ul li:hover {
+    background-color: rgba(250, 49, 156, 0.7); /* Add hover effect */
+}
+
+/* Responsive Design */
+
+/* For tablet and large mobile devices */
+@media (max-width: 1024px) {
+    .item-menu-bar {
+        grid-template-columns: repeat(3,1fr); /* Adjust grid for smaller screens */
+        gap: 20px;
+    }
+    ul {
+        gap: 15px; /* Reduced gap for smaller screens */
+    }
+    ul li {
+        font-size: 14px; /* Smaller font size on smaller screens */
+    }
+}
+@media (max-width: 820px) {
+    .item-menu-bar {
+        grid-template-columns:repeat(3,1fr) ; /* Adjust grid for smaller screens */
+        gap: 20px;
+    }
+  
+}
+/* For smaller tablets and large mobile devices */
+@media (max-width: 768px) {
+    .item-menu-bar {
+        grid-template-columns: repeat(3,1fr); 
+        gap: 10px;/* Adjust grid columns for medium screens */
+      margin-top: 4px;
+    }
+    ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px; /* Reduced gap between menu items */
+    }
+    ul li {
+        font-size: 13px; /* Smaller font size */
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 620px) {
+    .item-menu-bar {
+        grid-template-columns: repeat(2,1fr); /* Adjust grid columns for small screens */
+        gap: 15px; /* Adjust gap between grid items */
+    }
+}
+
+/* For very small mobile screens */
+@media (max-width: 480px) {
+    .item-menu-bar {
+        grid-template-columns: repeat(2, 1fr); /* Adjust grid for very small screens */
+    }
+    ul {
+        flex-direction: column; /* Stack the menu items vertically on small screens */
+        align-items: center; /* Center align the menu items */
+    }
+    ul li {
+        font-size: 12px; /* Even smaller font size for very small screens */
+        padding: 8px 12px; /* Smaller padding */
+    }
+}
+@media (max-width: 430px) {
+    .item-menu-bar {
+        grid-template-columns: repeat(1, 1fr);
+         /* Adjust grid for very small screens */
+         gap: 1px;
+    }
+   
+}

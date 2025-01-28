@@ -1,0 +1,471 @@
+
+.pages-wrapper {
+  min-height: 100vh;
+  width: 80vw;
+  margin: 0 auto;
+  margin-top: 10vh;
+  background-color: rgb(242, 199, 219);
+  position: relative;
+}
+
+.pages-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 15vh;
+  z-index: 1000;
+}
+
+.pages-container {
+
+  max-width: 100%;
+  height: 100%;
+  padding:  20px 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} 
+
+.pages-logo-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/*.pages-logo-container img {
+  height: 70px;
+  width: 180px;
+}*/
+
+.pages-button-container {
+  display: flex;
+  align-items: center;
+}
+
+.pages-frame {
+  align-items: center;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(198.81, 57.43, 223.76, 0.71) 0%,
+    rgb(247.39, 143.89, 250.96) 100%
+  );
+  border: 1px solid transparent;
+  display: flex;
+  justify-content: center;
+ padding: 13px 16px;
+  width: 170px;
+  box-shadow: 9px 9px 50px 0 #E11ADD;
+  cursor: pointer;
+}
+
+.pages-frame-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.pages-text-wrapper {
+  color: #000000;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 2.69px;
+  white-space: nowrap;
+}
+
+.pages-frame-image {
+  height: 20px;
+  width: 27px;
+}
+
+/*.pages-wrapper > *:not(.pages-navbar) {
+  margin-top: 0;
+ 
+}*/
+.main_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3px;
+  width: 100%;
+  position: relative;
+  height: auto;
+  margin-bottom: 2px;
+}
+
+
+.main_logo p {
+  font-family: "Inter-Bold", Helvetica;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 5px; 
+  text-align: center;
+  line-height: normal;
+  background: radial-gradient(
+    circle,
+    rgb(250, 49, 156) 0%,
+    rgb(113, 29, 74) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  max-width: 800px;
+ 
+}
+.mains{
+ 
+  padding: 20px;
+  max-width: 1200px; 
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  margin-top: 110px;
+
+}
+
+.main_img img{
+
+  height: 80px;
+  width: 80px;
+ display: block;
+}
+.para {
+  max-width: 800px;
+  margin: 2px auto;
+  position: relative;
+  height: auto;
+}
+.para p{
+  margin: 0;
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+}
+.big .page_img{
+  height: 280px;
+  width: 450px;
+  margin-top: 25px;
+  border: 3px solid  rgb(179, 48, 118);
+}
+.big h1{
+  font-size: 26px;
+  font-weight: bold;
+  color: black;
+  margin-top: 30px;
+}
+.big p{
+  margin-top: 25px;
+}
+.big .last p{
+  font-weight: bold;
+  margin-top: 80px;
+}
+.last_icon{
+  display: flex;
+  justify-content: center;
+}
+ .last .last_icon .ion img{
+  width: 44px;
+    height: 44px;
+    cursor: pointer; 
+    transition: transform 0.3s ease; 
+}
+
+ 
+
+@media(max-width:637px)
+{
+  .big .page_img{
+    height: 250px;
+    width: 400px;
+  }
+}
+@media(max-width:572px)
+{
+  .big .page_img{
+    height: 200px;
+    width: 350px;
+  }
+}
+@media(max-width:500px)
+{
+  .big .page_img{
+    height: 150px;
+    width: 300px;
+  }
+}
+@media(max-width:430px)
+{
+  .big .page_img{
+    height: 150px;
+    width: 200px;
+  }
+}
+.footers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(247, 127, 203);
+  width: 100%;
+  height: 60px;
+  padding: 0 80px; /* Adjusted padding for laptops */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #ddd;
+  margin-top: 40px;
+}
+
+/* Logo Image */
+.image_footer .footer_img {
+  height: 40px;
+}
+
+/* Footer Text */
+.head_footer {
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+  flex: 1;
+}
+.head_footer .footer_para {
+  text-align: center;
+  font-weight: 500;
+  margin: auto;
+  color: black;
+}
+@media(max-width:1024px)
+{
+  .mains{
+    margin-top: 100px;
+  }
+}
+/* Social Icons */
+.footer_icon {
+  display: flex;
+  gap: 10px;
+}
+.footer_icon .icon_png img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.footer_icon .icon_png img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) { /* Tablets & Small Laptops */
+  .footers {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      padding: 10px 40px; /* Reduced padding */
+      text-align: center;
+  }
+  .image_footer .footer_img {
+      height: 35px;
+      margin-bottom: 5px;
+  }
+  .head_footer .footer_para {
+      font-size: 12px;
+  }
+  .footer_icon {
+      margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) { /* Tablets & Large Phones */
+  .footers {
+      padding: 10px 20px;
+  }
+  .footer_icon .icon_png img {
+      width: 28px;
+      height: 28px;
+  }
+}
+
+@media (max-width: 480px) { /* Mobile Phones */
+  .footers {
+      flex-direction: column;
+      text-align: center;
+      padding: 15px 10px;
+  }
+  .image_footer .footer_img{
+      height: 30px;
+  }
+  .head_footer .footer_para {
+      font-size: 12px;
+  }
+  .footer_icon {
+      flex-direction: row;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+  }
+  .footer_icon .icon_png img {
+      width: 25px;
+      height: 25px;
+  }
+}
+@media(max-width:700px)
+{
+  nav .ms-auto .naviii{
+    height: 50px;
+      width: 200px;
+  }
+}
+@media(max-width:661px)
+{
+  nav .ms-auto .naviii{
+    height: 50px;
+      width: 200px;
+  }
+}
+
+@media(max-width:523px)
+{
+  nav .ms-auto .naviii{
+    height:45px;
+      width: 160px;
+  }
+}
+
+@media(max-width:473px)
+{
+  nav .ms-auto .naviii{
+    height:45px;
+      width: 120px;
+  }
+  .navi .nav-img {
+    width: 150px; 
+  }
+  .navi .frame .text-wrapper{
+    font-size: 12px;
+  }
+}
+@media(max-width:406px)
+{
+  nav .ms-auto .naviii{
+    height:38px;
+      width: 100px;
+  }
+  .navi .nav-img {
+    width: 120px; 
+  }
+  .navi .frame .text-wrapper{
+    font-size: 10px;
+  }
+}
+@media(max-width:356px)
+{
+  nav .ms-auto .naviii{
+    height:34px;
+      width: 90px;
+
+  }
+  .navi .nav-img {
+    width: 110px; 
+  }
+  .navi .frame .text-wrapper{
+    font-size: 8px;
+  }
+  .main_logo p{
+    font-size: 30px !important;
+  }
+}
+@media(max-width:324px)
+{
+  nav .ms-auto .naviii{
+    height:34px;
+      width: 80px;
+
+  }
+  .navi .nav-img {
+    width: 90px; 
+  }
+  .navi .frame .text-wrapper{
+    font-size: 7px;
+  }
+  .main-logo{
+    font-size: 20px;
+  }
+}
+@media (max-width: 287px) {
+  .navi {
+    display: flex;
+    flex-direction: column; /* Stack nav items vertically */
+    align-items: center; /* Center the nav items horizontally */
+    justify-content: flex-start; /* Start from the top */
+    width: 100%; /* Ensure it takes up full width */
+    padding: 10px; /* Add some padding if necessary */
+  }
+
+  .nav-img {
+    width: 50px; /* Adjust logo size */
+    height: auto;
+    margin-bottom: 10px; /* Space between logo and next item */
+  }
+
+  .frame {
+    display: flex;
+    flex-direction: column; /* Stack items in the frame vertically */
+    align-items: center;
+    margin-bottom: 10px; /* Space between frame and next section */
+  }
+
+  .div {
+    display: flex;
+    flex-direction: column; /* Ensure text and image are stacked vertically */
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-wrapper {
+    font-size: 14px; /* Adjust text size */
+    padding-bottom: 8px; /* Add some space below the text */
+  }
+
+  .img {
+    width: 18px; /* Adjust arrow size */
+    height: auto;
+  }
+.main-logo{
+  font-size: 20px;
+}
+}
+/*<div className="pages-container">
+            <div className="pages-logo-container">
+              <img src={assests.frame_logo} alt="" />
+            </div>
+            <Link to="/login">
+              <button
+                style={{
+                  border: "none",
+                  background: hover ? "none" : "initial",
+                }}
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+              >
+                <div className="pages-button-container">
+                  <div className="pages-frame">
+                    <div className="pages-frame-inner">
+                      <div className="pages-text-wrapper">
+                        GET STARTED
+                        <img
+                          className="pages-frame-image"
+                          alt="Frame"
+                          src={assests.arrow}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </button>
+            </Link>
+          </div>*/
