@@ -14,7 +14,7 @@ import Layout from '../../Admin/admin/layout/Layout'
 import Header from './Component/Header'
 //import Login from './Component/Login'
 //import { auth } from '../../backend/firebase'
-import Pages from './Blg1/[id]/Pages'
+import Pages from './Blog/[id]/Pages'
 
 
 const App = () => {
@@ -81,7 +81,7 @@ const App = () => {
             </>
           }
         />
-    <Route path="/Blg1/:id" element={<Pages lightmode={lightmode}/>}/>
+    <Route path="/Blog/:id" element={<Pages lightmode={lightmode}/>}/>
     < Route path="/admin" element={<Layout lightmode={lightmode}/>}>
    {/* Nested route for addProduct inside Layout */}
           <Route path="addProduct" element={<Page lightmode={lightmode} />} />

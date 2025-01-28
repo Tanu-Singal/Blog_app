@@ -40,10 +40,7 @@ cloudinary.config({
 
 const app = express();
 app.use(bodyParser.json());
-app.use(cors({ 
-  origin: "http://localhost:5174",
-  credentials: true
-})); 
+app.use(cors({ origin: "*" })); 
 
 app.use(express.json());
 //app.use("/images", express.static("upload/images"));

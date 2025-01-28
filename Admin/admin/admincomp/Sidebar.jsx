@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import assets from '../../../blogapp1/src/assets/assets';
+import assets from '../../../frontend/src/assets/assets'
 import './Sidebar.css';
 import { Link } from 'react-router-dom';
 

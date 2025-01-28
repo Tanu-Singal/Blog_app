@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Page2.css'
 import { toast } from 'react-toastify';
-import assests from '../../../blogapp1/src/assets/assets';
+import assests from '../../../frontend/src/assets/assets'
 import Subscriptiontable from '../admincomp/Subscriptiontable';
 const Page2 = () => {
     const [emails,setemails]=useState([]);

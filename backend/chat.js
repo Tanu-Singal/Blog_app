@@ -7,8 +7,7 @@ import cors  from "cors";
 const app=express();
 app.use(express.json());
 app.use(bodyParser.json());
-app.use(cors({ origin: "http://localhost:5174",
-  credentials: true}));
+app.use(cors({ origin: "*" }));
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 const chat = model.startChat({

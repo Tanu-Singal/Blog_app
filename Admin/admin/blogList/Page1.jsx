@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 import './Page1.css'
 import { toast } from 'react-toastify';
-import assests from '../../../blogapp1/src/assets/assets';
+import assests from '../../../frontend/src/assets/assets'
 import Blogtable from '../admincomp/Blogtable';
 const Page1 = () => {
   const [blogs,setBlog]=useState([]);

@@ -20,10 +20,13 @@ const Pages = (props) => {
    }*/
     
   const response=await fetch(`http://localhost:5000/api/blog?id=${id}`);
-
+  if (!response.ok) {
+    throw new Error("Failed to fetch blog data");
+  }
   const result=await response.json();
  
   setdata(result.obj);
+  
   }
   useEffect(()=>{
 fetchblogdata();

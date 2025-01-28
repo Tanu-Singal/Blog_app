@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import assests from '../../../blogapp1/src/assets/assets'
+
 import './Page.css'
 import { toast } from 'react-toastify'
+import assests from '../../../frontend/src/assets/assets'
 const Page = () => {
   const [image,setImage]=useState(false)
   const [data,setData]=useState({

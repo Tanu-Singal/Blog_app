@@ -67,13 +67,11 @@
 }
 
 /* Button Hover Effect */
-.side-button:hover {
+
+.icon1{
   background: #d0c4f7;
   transform: scale(1.05);
   box-shadow: 9px 9px 50px 0 #E11ADD;
-}
-.icon1{
-  background-color: #E4717A;
 }
 /* Responsive Design */
 @media (max-width: 1024px) {

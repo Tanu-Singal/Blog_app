@@ -1,5 +1,5 @@
 import React from 'react'
-import assests from '../../../blogapp1/src/assets/assets';
+import assests from '../../../frontend/src/assets/assets'
 import './Layout.css'
 import { Outlet,Link } from 'react-router-dom'
 import "react-toastify/dist/ReactToastify.css";
