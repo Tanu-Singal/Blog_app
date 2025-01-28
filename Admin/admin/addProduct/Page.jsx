@@ -51,25 +51,25 @@ const Page = () => {
     }
   }
   return (
-    <div className='ss' >
+    <div classNameName='ss' >
       <form onSubmit={onsubmithandler} style={{backgroundImage:`url(${assests.p})`, backgroundSize: 'cover', backgroundPosition: 'center' }} >
-      <div className="form-1">
-    <label htmlFor="exampleInputthumbnail" className="form-label">Upload thumbnail</label>
+      <div classNameName="form-1">
+    <label htmlFor="exampleInputthumbnail" classNameName="form-label">Upload thumbnail</label>
     <label htmlFor='image'>
-      <img className='Page_img' src={!image?assests.upload_area:URL.createObjectURL(image)} alt=""/>
+      <img classNameName='Page_img' src={!image?assests.upload_area:URL.createObjectURL(image)} alt=""/>
     </label>
     <input onChange={(e)=>setImage(e.target.files[0])} type='file' id='image'hidden required/>
   </div>
-  <div className="form-2">
-    <label htmlFor="exampletitle" className="form-label">Blog Title</label>
-    <input name='title' onChange={onChangeHandler} value={data.title} type="text" class="form-control" placeholder='type here' required/>
+  <div classNameName="form-2">
+    <label htmlFor="exampletitle" classNameName="form-label">Blog Title</label>
+    <input name='title' onChange={onChangeHandler} value={data.title} type="text" className="form-control" placeholder='type here' required/>
   </div>
-  <div className="form-2">
-    <label htmlFor="examplede" className="form-label">Blog Description</label>
-    <textarea rows={6} name='description' onChange={onChangeHandler} value={data.description} type="text" class="form-control" placeholder='write content here' required/>
+  <div classNameName="form-2">
+    <label htmlFor="examplede" classNameName="form-label">Blog Description</label>
+    <textarea rows={6} name='description' onChange={onChangeHandler} value={data.description} type="text" className="form-control" placeholder='write content here' required/>
   </div>
-  <div className="form-2">
-    <label htmlFor="examplecategory" className="form-label">Blog category</label>
+  <div classNameName="form-2">
+    <label htmlFor="examplecategory" classNameName="form-label">Blog category</label>
     <br/>
    <select name='category' onChange={onChangeHandler} value={data.category}>
     <option value="Startup">Startup</option>
@@ -78,7 +78,7 @@ const Page = () => {
    </select>
   </div>
    <br/>
-  <button type="submit" className="btn" style={{backgroundImage:`url(${assests.up1})`,color:"black",fontWeight:"bolder"}}>Add</button>
+  <button type="submit" classNameName="btn" style={{backgroundImage:`url(${assests.up1})`,color:"black",fontWeight:"bolder"}}>Add</button>
 </form>
     </div>
   )
