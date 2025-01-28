@@ -1,0 +1,32 @@
+table.table th img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+  }
+
+  table.table td:last-child {
+    text-align: center;
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  table.table td:last-child:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  table.table td {
+    padding: 15px;
+    text-align: left;
+    font-size: 1rem;
+    color: #555;
+  }
+
+  table.table tbody tr {
+    transition: background-color 0.3s ease;
+  }
+  
+  table.table tbody tr:hover {
+    background-color: #f9f9f9;
+  }

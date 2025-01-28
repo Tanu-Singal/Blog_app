@@ -1,0 +1,256 @@
+form {
+    width: 500px;
+  
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-height: 85vh;
+    overflow-y: auto; 
+  }
+  .ss{
+    position: absolute;
+    top: 75px;
+    left: 350px;
+    max-height: 85vh;
+    overflow-y: auto; 
+  }
+
+  form .form-1 .form-label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+    font-family: math;
+    font-weight: bolder;
+    color: white;
+  }
+  form .form-2 .form-label {
+    font-family: math;
+    font-weight: bolder;
+    color: white;
+  }
+  form .form-1 .Page_img {
+    display: block;
+    height: 70px;
+    width: 140px;
+    margin-top: 10px;
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  form .form-control {
+
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  form .form-control:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 3px rgba(0, 123, 255, 0.25);
+  }
+  
+  
+  form .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  form .btn-primary:hover {
+    background-color: #0056b3;
+  }
+ 
+  form h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  form .mb-3 {
+    margin-bottom: 20px;
+  }
+  @media (max-width: 1024px) {
+    .ss {
+       
+        left: 270px;
+    }
+
+    form {
+        width: 500px;
+    }
+}
+
+ 
+
+/* Responsive Design */
+@media (max-width: 800px) {
+    .ss {
+       
+      
+        left: 250px;
+    }
+
+    form {
+        width: 450px;
+    }
+}
+@media (max-width: 767px) {
+ 
+
+  form {
+      width: 400px;
+  }
+}
+@media (max-width: 700px) {
+ 
+
+  form {
+      width: 380px;
+  }
+}
+@media (max-width: 660px) {
+ 
+  .ss {
+  
+  
+    left: 240px;
+}
+
+  form {
+      width: 360px;
+  }
+}
+@media (max-width: 612px) {
+ 
+  .ss {
+    
+  
+    left: 230px;
+}
+
+  form {
+      width: 370px;
+  }
+}
+@media (max-width: 600px) {
+ 
+  .ss {
+
+  
+    left: 210px;
+}
+
+  form {
+      width: 370px;
+  }
+}
+@media (max-width: 588px) {
+  .ss {
+   
+    left: 220px;
+}
+
+  form {
+      width: 340px;
+  }
+}
+@media (max-width: 550px) {
+ 
+
+  form {
+      width: 300px;
+  }
+}
+@media (max-width: 525px) {
+ 
+  .ss {
+   
+    left: 200px;
+}
+  form {
+      width: 280px;
+  }
+}
+
+/*@media (max-width: 580px) {
+  .ss {
+    left: 0;
+    top: 230px;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 62vh;
+    width: 100%;
+  }
+
+  form {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  form .form-control,
+  form select,
+  form textarea,
+  form input {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    display: block;
+  }
+
+  form .btn {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}*/
+@media (max-width: 580px) {
+  .ss {
+    left: 0;
+    top: 240px; /* Start from 230px from the top */
+    overflow-y: auto; /* Enable scrolling */
+    display: block; /* Changed to block to allow form to expand naturally */
+    width: 100%;
+    position: absolute; /* Use absolute positioning for more control */
+    height: auto; /* Allow it to expand with content */
+  }
+
+  form {
+    width: 100%!important;
+    max-width: 100% !important;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Enable scrolling inside form */
+    max-height: 60vh; /* Set a maximum height for the form */
+  }
+
+  form .form-control,
+  form select,
+  form textarea,
+  form input {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    display: block;
+  }
+
+  form .btn {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
