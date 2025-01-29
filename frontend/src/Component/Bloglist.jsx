@@ -7,7 +7,7 @@ const Bloglist = (props) => {
     const [blogs,setBlog]=useState([]);
     const fetchblog=async()=>{
     
-      const response=await fetch("http://localhost:5000/api/blog",{
+      const response=await fetch("http://localhost:4000/api/blog",{
         method:"GET"
       })
       if (!response.ok) {

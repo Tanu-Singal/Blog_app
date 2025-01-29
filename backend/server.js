@@ -1,3 +1,4 @@
+import { GoogleGenerativeAI } from "@google/generative-ai";
 import dotenv from 'dotenv';
 dotenv.config();
 import express from "express";
@@ -40,7 +41,11 @@ cloudinary.config({
 
 const app = express();
 app.use(bodyParser.json());
-app.use(cors({ origin: "*" })); 
+app.use(cors({
+  origin:"https://localhost:5173",
+  methods:['GET','POST','DELETE','PUT'],
+  
+})); 
 
 app.use(express.json());
 //app.use("/images", express.static("upload/images"));
@@ -58,7 +63,23 @@ const loaddb = async () => {
   }
 };
 loaddb();
-
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+const chat = model.startChat({
+  history: [],
+});
+const generate=async(usermessage)=>{
+    try{
+        let result = await chat.sendMessage(usermessage);
+        console.log("Generated response:", result.response.text()); 
+        return result.response.text();
+        }
+    
+    catch(err)
+    {
+        console.log(err);
+    }
+}
 app.get("/api/blog",async (req,res)=>{
    const BlogId=req.query.id; //because the id will get from query
 
@@ -98,6 +119,19 @@ app.post("/upload", async (req, res) => {
     res.send({ status: 1, msg: "Blog saved",  image_url: uploadres.secure_url});
   })
 });
+app.post('/api/ask',async(req,res)=>{
+  console.log("Received request with body:", req.body); 
+  const data=req.body.ask;
+
+if (!data) {
+  return res.status(400).send({ response: "Invalid request" });
+}
+
+  if (!data) return res.status(400).send({ response: "Invalid request" });
+  const result=await generate(data);
+  console.log("Generated result:", result); 
+  res.send({response:result});
+})
 app.delete("/api/blog/:id",async(req,res)=>{
   const blogId=req.params.id;
   const blog=await Blogmodel.findById(blogId);
@@ -158,7 +192,7 @@ app.delete("/api/email/:id",async(req,res)=>{
  await Emailmodel.findByIdAndDelete(emailId)
  res.send({status:1,msg:"Email deleted"})
 })
-const port=process.env.PORT || 5000
+const port=process.env.PORT || 4000
 app.listen(port,()=>{
   console.log("server is running")
 })

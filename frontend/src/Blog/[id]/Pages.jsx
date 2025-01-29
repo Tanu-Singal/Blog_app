@@ -19,7 +19,7 @@ const Pages = (props) => {
      }
    }*/
     
-  const response=await fetch(`http://localhost:5000/api/blog?id=${id}`);
+  const response=await fetch(`http://localhost:4000/api/blog?id=${id}`);
   if (!response.ok) {
     throw new Error("Failed to fetch blog data");
   }

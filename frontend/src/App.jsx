@@ -7,14 +7,15 @@ import { Route, Routes, useNavigate } from 'react-router-dom'
 import assests from './assets/assets'
 //import { onAuthStateChanged } from 'firebase/auth'
 import Chatbox1 from './Component/Chatbox1'
-import Page from '../../Admin/admin/addProduct/Page'
-import Page1 from '../../Admin/admin/blogList/Page1'
-import Page2 from '../../Admin/admin/subscription/Page2'
-import Layout from '../../Admin/admin/layout/Layout'
+
 import Header from './Component/Header'
 //import Login from './Component/Login'
 //import { auth } from '../../backend/firebase'
 import Pages from './Blog/[id]/Pages'
+import Page1 from '../../Admin1/src/admin/blogList/Page1'
+import Page from '../../Admin1/src/admin/addProduct/Page'
+import Page2 from '../../Admin1/src/admin/subscription/Page2'
+import Layout from '../../Admin1/src/admin/layout/Layout'
 
 
 const App = () => {
