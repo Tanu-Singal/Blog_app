@@ -4,6 +4,7 @@ import './Page.css'
 import { toast } from 'react-toastify'
 import assests from '../../../../frontend/src/assets/assets';
 const Page = () => {
+  const url= "https://blog-app6-rv4t.onrender.com"
   const [image,setImage]=useState(false)
   const [data,setData]=useState({
     title:"",
