@@ -4,7 +4,7 @@ import './Page.css'
 import { toast } from 'react-toastify'
 import assests from '../../../../frontend/src/assets/assets';
 const Page = () => {
-  const url= "https://blog-app6-rv4t.onrender.com"
+ 
   const [image,setImage]=useState(false)
   const [data,setData]=useState({
     title:"",
@@ -30,7 +30,7 @@ const Page = () => {
     formData.append("authorImg", data.authorImg);
     formData.append("image", image); 
 
-    const response=await fetch("http://localhost:3001/upload",{
+    const response=await fetch("https://blog-app6-rv4t.onrender.com/upload",{
       method:"POST",
       body:formData,
     })
