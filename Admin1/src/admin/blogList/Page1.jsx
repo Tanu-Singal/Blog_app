@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 import './Page1.css'
-import { toast } from 'react-toastify';
+//import { toast } from 'react-toastify';
 import assests from '../../../../frontend/src/assets/assets';
 import Blogtable from '../admincomp/Blogtable';
 const Page1 = () => {
@@ -22,7 +22,7 @@ const Page1 = () => {
       })
 
       const data = await resp.json();
-      toast.success("Blog deleted successfully!");
+     // toast.success("Blog deleted successfully!");
       fetchblog();
   }
   useEffect(()=>{

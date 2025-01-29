@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './Page2.css'
-import { toast } from 'react-toastify';
+//import { toast } from 'react-toastify';
 import assests from '../../../../frontend/src/assets/assets';
 import Subscriptiontable from '../admincomp/Subscriptiontable';
 const Page2 = () => {
@@ -18,7 +18,7 @@ const Page2 = () => {
         method:"DELETE"
       })
        const data = await resp.json();
-        toast.success("Email deleted successfully!");
+       // toast.success("Email deleted successfully!");
         fetchemails();
     }
     useEffect(()=>{

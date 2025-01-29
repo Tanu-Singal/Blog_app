@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import './Page.css'
-import { toast } from 'react-toastify'
+//import { toast } from 'react-toastify'
 import assests from '../../../../frontend/src/assets/assets';
 const Page = () => {
  
@@ -37,7 +37,7 @@ const Page = () => {
     const result=await response.json();
     if(response.ok)
     {
-      toast.success("Blog added successfully");
+     // toast.success("Blog added successfully");
       setImage(false);
       setData({
         title:"",
@@ -48,7 +48,8 @@ const Page = () => {
       })
     }
     else{
-      toast.error("Error")
+     // toast.error("Error")
+     console.log("error")
     }
   }
   return (
