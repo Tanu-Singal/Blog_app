@@ -29,7 +29,7 @@ const Page = () => {
     formData.append("authorImg", data.authorImg);
     formData.append("image", image); 
 
-    const response=await fetch("http://localhost:4000/upload",{
+    const response=await fetch("http://localhost:3001/upload",{
       method:"POST",
       body:formData,
     })

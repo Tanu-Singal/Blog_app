@@ -12,7 +12,7 @@ const Header = (props) => {
    e.preventDefault();
  
 
-   const response=await fetch("http://localhost:4000/api/email",{
+   const response=await fetch("http://localhost:3001/api/email",{
     method:"POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email }),

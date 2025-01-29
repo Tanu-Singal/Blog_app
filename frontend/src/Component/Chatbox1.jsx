@@ -13,7 +13,7 @@ const Chatbox1 = (props) => {
         const usermsg={text:input,sender:"user"}
         setMessage(prevMessages => [...prevMessages, usermsg]);
         try{
-          const response = await fetch('http://localhost:8000/api/ask', {
+          const response = await fetch('http://localhost:3001/api/ask', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

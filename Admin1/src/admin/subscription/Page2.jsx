@@ -6,7 +6,7 @@ import Subscriptiontable from '../admincomp/Subscriptiontable';
 const Page2 = () => {
     const [emails,setemails]=useState([]);
     const fetchemails=async()=>{
-      const response=await fetch("http://localhost:4000/api/email",{
+      const response=await fetch("http://localhost:3001/api/email",{
         method:"GET"
       })
       const data=await response.json();
@@ -14,7 +14,7 @@ const Page2 = () => {
       setemails(data.emails)
     }
     const deleteEmail=async(mongoId)=>{
-      const resp=await fetch(`http://localhost:4000/api/email/${mongoId}`,{
+      const resp=await fetch(`http://localhost:3001/api/email/${mongoId}`,{
         method:"DELETE"
       })
        const data = await resp.json();

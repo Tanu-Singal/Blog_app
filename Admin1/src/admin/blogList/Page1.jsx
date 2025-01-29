@@ -7,7 +7,7 @@ import Blogtable from '../admincomp/Blogtable';
 const Page1 = () => {
   const [blogs,setBlog]=useState([]);
   const fetchblog=async()=>{
-   const response=await fetch("http://localhost:4000/api/blog",{
+   const response=await fetch("http://localhost:3001/api/blog",{
     method:"GET"
    })
    const data=await response.json();
@@ -15,7 +15,7 @@ const Page1 = () => {
   }
 
   const deleteblog=async(mongoId)=>{
-      const resp=await fetch(`http://localhost:4000/api/blog/${mongoId}`,{
+      const resp=await fetch(`http://localhost:3001/api/blog/${mongoId}`,{
         method:"DELETE",
        
       })

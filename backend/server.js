@@ -42,9 +42,9 @@ cloudinary.config({
 const app = express();
 app.use(bodyParser.json());
 app.use(cors({
-  origin:"https://localhost:5173",
+  origin:"http://localhost:5173",
   methods:['GET','POST','DELETE','PUT'],
-  
+  credentials: true,
 })); 
 
 app.use(express.json());
@@ -192,7 +192,7 @@ app.delete("/api/email/:id",async(req,res)=>{
  await Emailmodel.findByIdAndDelete(emailId)
  res.send({status:1,msg:"Email deleted"})
 })
-const port=process.env.PORT || 4000
+const port=process.env.PORT || 3001
 app.listen(port,()=>{
   console.log("server is running")
 })
