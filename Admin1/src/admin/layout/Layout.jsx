@@ -5,7 +5,7 @@ import './Layout.css'
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from 'react-toastify'
 import Sidebar from '../admincomp/Sidebar';
-import { Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 //import { auth, logout } from '../../../backend/firebase';
 const Layout = () => {
  /* const handleLogout = () => {
