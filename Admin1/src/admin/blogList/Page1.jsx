@@ -5,6 +5,7 @@ import { toast } from 'react-toastify';
 import assests from '../../../../frontend/src/assets/assets';
 import Blogtable from '../admincomp/Blogtable';
 const Page1 = () => {
+  const url= "https://blog-app6-rv4t.onrender.com"
   const [blogs,setBlog]=useState([]);
   const fetchblog=async()=>{
    const response=await fetch("http://localhost:3001/api/blog",{
