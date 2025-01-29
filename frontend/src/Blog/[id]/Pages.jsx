@@ -5,6 +5,7 @@ import assests from '../../assets/assets';
 
 
 const Pages = (props) => {
+  
    const [hover, setHover] = useState(false);
   const [data,setdata]=useState(null);
   const {id}=useParams();
