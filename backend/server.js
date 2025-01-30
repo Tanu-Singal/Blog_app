@@ -42,7 +42,7 @@ cloudinary.config({
 const app = express();
 app.use(bodyParser.json());
 app.use(cors({
-  origin:"http://localhost:5173",
+  origin:"https://blog-app852.onrender.com",
   methods:['GET','POST','DELETE','PUT'],
   credentials: true,
 })); 
