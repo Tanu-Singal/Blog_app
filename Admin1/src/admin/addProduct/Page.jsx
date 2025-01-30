@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import './Page.css'
-//import { toast } from 'react-toastify'
+import { toast } from 'react-toastify'
 import assests from '../../../../frontend/src/assets/assets';
 const Page = () => {
  

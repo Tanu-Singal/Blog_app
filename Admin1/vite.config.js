@@ -7,9 +7,15 @@ export default defineConfig({
   build: {
     rollupOptions: {
       external: ['react-toastify/dist/ReactToastify.css'],
-      external: ['react-router-dom'],
+
     },
   },
+  resolve: {
+    alias: {
+      "react-router-dom": require.resolve("react-router-dom"),
+    },
+  },
+  
   server: {
     proxy: {
        '/api': {

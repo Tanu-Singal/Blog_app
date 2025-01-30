@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './App.css'
 import Bloglist from './Component/Bloglist'
 import Footer from './Component/Footer'
-import { Route, Routes, useNavigate } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 
 import assests from './assets/assets'
 //import { onAuthStateChanged } from 'firebase/auth'

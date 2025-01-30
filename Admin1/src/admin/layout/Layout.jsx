@@ -2,8 +2,8 @@ import React from 'react'
 import assests from '../../../../frontend/src/assets/assets';
 import './Layout.css'
 
-//import "react-toastify/dist/ReactToastify.css";
-//import { ToastContainer } from 'react-toastify'
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from 'react-toastify'
 import Sidebar from '../admincomp/Sidebar';
 import { Link, Outlet } from 'react-router-dom';
 //import { auth, logout } from '../../../backend/firebase';
@@ -14,7 +14,7 @@ const Layout = () => {
   return (
     <>
     <div className="layout-container">
-      {/*<ToastContainer theme="dark"/>*/}
+      <ToastContainer theme="dark"/>
     <Sidebar/>
   <div className="admin-panel">
    <div className="panel-title"><h3>Admin Panel</h3></div>
