@@ -96,13 +96,10 @@ app.get("/api/blog",async (req,res)=>{
    }
   
 })//on homepage no blog id is present to ye sabhi blog ka data bhj dega or agr id hai means we open a blog thn vo usi particular blog ka data send krega
-app.post("/upload", async (req, res) => {
+/*app.post("/upload", async (req, res) => {
 
-  if (!req.file || !req.file.image) {
-    return res.status(400).send({ status: 0, msg: "No image uploaded" });
-  }
-  const file = req.file.image;
-  
+ 
+  const file = req.files.image;
 
     // Upload file to Cloudinary
     const uploadres = await cloudinary.uploader.upload(file.tempFilePath);
@@ -122,19 +119,65 @@ app.post("/upload", async (req, res) => {
   .then(() => {
     res.send({ status: 1, msg: "Blog saved",  image_url: uploadres.secure_url});
   })
+});*/
+app.post("/upload", async (req, res) => {
+  try {
+    // Check if file exists
+    if (!req.files || !req.files.image) {
+      return res.status(400).json({ status: 0, msg: "No file uploaded" });
+    }
+
+    const file = req.files.image;
+
+    // Upload file to Cloudinary
+    const uploadres = await cloudinary.uploader.upload(file.tempFilePath);
+    
+    if (!uploadres.secure_url) {
+      throw new Error("Cloudinary upload failed");
+    }
+
+    // Destructure request body
+    const { title, description, category, author, authorImg } = req.body;
+
+    // Create new blog entry
+    const newblog = new Blogmodel({
+      title,
+      description,
+      category,
+      author,
+      image: uploadres.secure_url,
+      image_public_id: uploadres.public_id,
+      authorImg,
+    });
+
+    // Save blog to database
+    await newblog.save();
+
+    res.json({ status: 1, msg: "Blog saved", image_url: uploadres.secure_url });
+
+  } catch (error) {
+    console.error("Error in /upload:", error.message);
+    res.status(500).json({ status: 0, msg: "Internal Server Error", error: error.message });
+  }
 });
-app.post('/api/ask',async(req,res)=>{
-  console.log("Received request with body:", req.body); 
-  const data=req.body.ask;
+app.post('/api/ask', async (req, res) => {
+  console.log("Received request with body:", req.body);
+  const data = req.body.ask;
 
-if (!data) {
-  return res.status(400).send({ response: "Invalid request" });
-}
+  if (!data || typeof data !== 'string') {
+    return res.status(400).send({ response: "Invalid request. 'ask' must be a string." });
+  }
 
-  const result=await generate(data);
-  console.log("Generated result:", result); 
-  res.send({response:result});
-})
+  try {
+    const result = await generate(data);
+    console.log("Generated result:", result);
+    res.send({ response: result });
+  } catch (err) {
+    console.log("Error in /api/ask:", err);
+    res.status(500).send({ response: "Internal server error while generating response." });
+  }
+});
+
 app.delete("/api/blog/:id",async(req,res)=>{
   const blogId=req.params.id;
   const blog=await Blogmodel.findById(blogId);
@@ -198,7 +241,7 @@ app.delete("/api/email/:id",async(req,res)=>{
  await Emailmodel.findByIdAndDelete(emailId)
  res.send({status:1,msg:"Email deleted"})
 })
-const port=process.env.PORT || 3001
+const port=process.env.PORT || 3003
 app.listen(port,()=>{
   console.log("server is running")
 })

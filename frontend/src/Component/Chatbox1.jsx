@@ -13,7 +13,7 @@ const Chatbox1 = (props) => {
         const usermsg={text:input,sender:"user"}
         setMessage(prevMessages => [...prevMessages, usermsg]);
         try{
-          const response = await fetch('http://localhost:3001/api/ask', {
+          const response = await fetch('http://localhost:3003/api/ask', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -38,6 +38,12 @@ const Chatbox1 = (props) => {
     const toggleChat = () => {
       setIsChatOpen(!isChatOpen);
   }
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+        sendMessage();
+    }
+};
+
   useEffect(()=>{
     const interval=setInterval(()=>{
         setFloatmsg(true);
@@ -76,6 +82,7 @@ const Chatbox1 = (props) => {
                         <input
                             type="text"
                             value={input}
+                            onKeyDown={handleKeyDown} 
                             onChange={(e) => setInput(e.target.value)}
                             placeholder="Type a message..."
                         />

@@ -1,5 +1,5 @@
 import React from 'react'
-import assests from '../../../../frontend/src/assets/assets';
+import assests from '../../assets/assets'
 import './Layout.css'
 
 import "react-toastify/dist/ReactToastify.css";

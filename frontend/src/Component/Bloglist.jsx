@@ -7,7 +7,7 @@ const Bloglist = (props) => {
     const [blogs,setBlog]=useState([]);
     const fetchblog=async()=>{
     
-      const response=await fetch("https://blog-app6-rv4t.onrender.com/api/blog",{
+      const response=await fetch("http://localhost:3003/api/blog",{
         method:"GET"
       })
       if (!response.ok) {

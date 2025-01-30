@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react'
 import 'react-toastify/dist/ReactToastify.css';
 import './Page1.css'
 import { toast } from 'react-toastify';
-import assests from '../../../../frontend/src/assets/assets';
+import assests from '../../assets/assets'
 import Blogtable from '../admincomp/Blogtable';
 const Page1 = () => {
 
   const [blogs,setBlog]=useState([]);
   const fetchblog=async()=>{
-   const response=await fetch("https://blog-app6-rv4t.onrender.com/api/blog",{
+   const response=await fetch("http://localhost:3003/api/blog",{
     method:"GET"
    })
    const data=await response.json();
@@ -16,7 +16,7 @@ const Page1 = () => {
   }
 
   const deleteblog=async(mongoId)=>{
-      const resp=await fetch(`https://blog-app6-rv4t.onrender.com/api/blog/${mongoId}`,{
+      const resp=await fetch(`http://localhost:3003/api/blog/${mongoId}`,{
         method:"DELETE",
        
       })

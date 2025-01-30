@@ -12,7 +12,7 @@ const Header = (props) => {
    e.preventDefault();
  
 
-   const response=await fetch("https://blog-app6-rv4t.onrender.com/api/email",{
+   const response=await fetch("http://localhost:3003/api/email",{
     method:"POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email }),

@@ -1,5 +1,5 @@
 import React from 'react'
-import assets from '../../../../frontend/src/assets/assets';
+import assets from '../../assets/assets'
 import './Blogtable.css'
 const Blogtable = ({authorImg,title,author,date,deleteblog,mongoId}) => {
   const Blogdate=new Date(date);

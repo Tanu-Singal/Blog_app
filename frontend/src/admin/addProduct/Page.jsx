@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import './Page.css'
 import { toast } from 'react-toastify'
-import assests from '../../../../frontend/src/assets/assets';
+import assests from '../../assets/assets'
 const Page = () => {
  
   const [image,setImage]=useState(false)
@@ -30,14 +30,14 @@ const Page = () => {
     formData.append("authorImg", data.authorImg);
     formData.append("image", image); 
 
-    const response=await fetch("https://blog-app6-rv4t.onrender.com/upload",{
+    const response=await fetch("http://localhost:3003/upload",{
       method:"POST",
       body:formData,
     })
     const result=await response.json();
     if(response.ok)
     {
-     // toast.success("Blog added successfully");
+      toast.success("Blog added successfully");
       setImage(false);
       setData({
         title:"",
@@ -48,7 +48,7 @@ const Page = () => {
       })
     }
     else{
-     // toast.error("Error")
+     toast.error("Error")
      console.log("error")
     }
   }

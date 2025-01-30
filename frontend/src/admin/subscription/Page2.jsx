@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react'
 import './Page2.css'
 import 'react-toastify/dist/ReactToastify.css';
 import { toast } from 'react-toastify';
-import assests from '../../../../frontend/src/assets/assets';
+import assests from '../../assets/assets'
 import Subscriptiontable from '../admincomp/Subscriptiontable';
 const Page2 = () => {
     const [emails,setemails]=useState([]);
     const fetchemails=async()=>{
-      const response=await fetch("https://blog-app6-rv4t.onrender.com/api/email",{
+      const response=await fetch("http://localhost:3003/api/email",{
         method:"GET"
       })
       const data=await response.json();
@@ -15,7 +15,7 @@ const Page2 = () => {
       setemails(data.emails)
     }
     const deleteEmail=async(mongoId)=>{
-      const resp=await fetch(`https://blog-app6-rv4t.onrender.com/api/email/${mongoId}`,{
+      const resp=await fetch(`http://localhost:3003/api/email/${mongoId}`,{
         method:"DELETE"
       })
        const data = await resp.json();

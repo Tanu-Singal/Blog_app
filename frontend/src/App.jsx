@@ -12,10 +12,11 @@ import Header from './Component/Header'
 //import Login from './Component/Login'
 //import { auth } from '../../backend/firebase'
 import Pages from './Blog/[id]/Pages'
-import Page1 from '../../Admin1/src/admin/blogList/Page1'
-import Page from '../../Admin1/src/admin/addProduct/Page'
-import Page2 from '../../Admin1/src/admin/subscription/Page2'
-import Layout from '../../Admin1/src/admin/layout/Layout'
+import Page1 from './admin/blogList/Page1'
+import Page2 from './admin/subscription/Page2'
+import Layout from './admin/layout/Layout'
+import Page from './admin/addProduct/Page'
+
 
 
 const App = () => {
