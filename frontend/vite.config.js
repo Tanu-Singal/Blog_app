@@ -10,12 +10,7 @@ export default defineConfig({
 
     },
   },
-  resolve: {
-    alias: {
-      "react-router-dom": require.resolve("react-router-dom"),
-    },
-  },
-  
+
   server: {
    proxy: {
       '/api': {
