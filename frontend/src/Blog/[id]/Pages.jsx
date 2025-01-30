@@ -20,7 +20,7 @@ const Pages = (props) => {
      }
    }*/
     
-  const response=await fetch(`http://localhost:3003/api/blog?id=${id}`);
+  const response=await fetch(`https://blog-53.onrender.com/api/blog?id=${id}`);
   if (!response.ok) {
     throw new Error("Failed to fetch blog data");
   }
