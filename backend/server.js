@@ -71,7 +71,7 @@ const chat = model.startChat({
 const generate=async(usermessage)=>{
     try{
         let result = await chat.sendMessage(usermessage);
-        console.log("Generated response:", result.response.text()); 
+        console.log("Generated response:", result.response.text); 
         return result.response.text();
         }
     
@@ -98,7 +98,11 @@ app.get("/api/blog",async (req,res)=>{
 })//on homepage no blog id is present to ye sabhi blog ka data bhj dega or agr id hai means we open a blog thn vo usi particular blog ka data send krega
 app.post("/upload", async (req, res) => {
 
-    const file = req.files.image;
+  if (!req.file || !req.file.image) {
+    return res.status(400).send({ status: 0, msg: "No image uploaded" });
+  }
+  const file = req.file.image;
+  
 
     // Upload file to Cloudinary
     const uploadres = await cloudinary.uploader.upload(file.tempFilePath);
@@ -127,7 +131,6 @@ if (!data) {
   return res.status(400).send({ response: "Invalid request" });
 }
 
-  if (!data) return res.status(400).send({ response: "Invalid request" });
   const result=await generate(data);
   console.log("Generated result:", result); 
   res.send({response:result});
@@ -189,6 +192,9 @@ app.post("/api/email", async (req, res) => {
 app.delete("/api/email/:id",async(req,res)=>{
   const emailId=req.params.id;
   const email=await Emailmodel.findById(emailId);
+  if (!email) {
+    return res.status(404).send({ status: 0, msg: "Email not found" });
+  }
  await Emailmodel.findByIdAndDelete(emailId)
  res.send({status:1,msg:"Email deleted"})
 })
